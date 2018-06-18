@@ -1,0 +1,19 @@
+{
+  "name": "gigya-approuter",
+  "version": "1.0.0",
+  "description": "Approuter extension with consent management capabilities via Gigya",
+  "scripts": {
+    "start": "node index.js"
+  },
+  "keywords": [],
+  "author": "Vadim Tomnikov",
+  "license": "MIT",
+  "dependencies": {
+    "@sap/approuter": "^5.3.0",
+    "debug": "^3.1.0",
+    "node-fetch": "^2.1.2"
+  },
+  "engines": {
+    "node": ">=8.0.0"
+  }
+}
