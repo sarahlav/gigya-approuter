@@ -215,10 +215,7 @@ async function consentManagementMiddleware(req, res, next) {
         } else {
             debug('[Info]: User consent is required. Serving user consent page');
             res.statusCode = 200;
-            res.end(consentPage(req.user,
-                // TODO: change to profile.documentUrl, once there will be valid PDF out there
-                'https://www.adobe.com/content/dam/acom/en/devnet/acrobat/pdfs/pdf_open_parameters.pdf'
-            ));
+            res.end(consentPage(req.user, profile.documentUrl));
         }
     } catch(err) {
         debug('[Error]: ' + err.message);
