@@ -62,7 +62,7 @@ function consentPage(user, pdf) {
             padding: 0 2rem;
             border-bottom: 1px solid #eee;
             background-color: #fff;
-            color: #0c73b5;;
+            color: #0c73b5;
             text-shadow: 0 0 0.125rem #fff;
         }
         .dialog > main {
@@ -145,7 +145,7 @@ function consentPage(user, pdf) {
                 </object>
             </main>
             <footer>
-                <button type="Emblazed" onclick="acceptConsent()">I agree</button>
+                <button onclick="acceptConsent()">I agree</button>
                 <button onclick="declineConsent()">Decline</button>                
             </footer>    
         </div>
