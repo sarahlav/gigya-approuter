@@ -44,14 +44,14 @@ function consentPage(user, pdf) {
         .dialog {
             background: white;
             border: none;
-            border-radius: 0.25rem;
+            border-radius: 0.5rem;
             box-shadow: 0 0.625rem 1.875rem 0 rgba(0,0,0,0.15), 0 0 0 1px rgba(0,0,0,0.15);
             overflow: hidden;
             max-width: 80%;
             max-height: 70%;
             width: 80%;
             height: 70%;
-            font-family: Arial,Helvetica,sans-serif;
+            font-family: Arial,Helvetica,sans-serif;			
         }
         .dialog > header {
             display: flex;
@@ -64,42 +64,53 @@ function consentPage(user, pdf) {
             background-color: #fff;
             color: #0c73b5;
             text-shadow: 0 0 0.125rem #fff;
+			font-size: 1.25rem;
+			font-family: "72",Arial,Helvetica,sans-serif;
         }
         .dialog > main {
             font-size: 0;
+			display: flex;
+			height: calc(100% - 6.5rem);
         }
+		
         .dialog > footer {
             display: flex;
-            flex-direction: row;
-            align-items: center;
-            justify-content: flex-end;
-            height: 2.5rem;
-            padding: 0 0.5rem;
-            background-color: #f6f6f6;
-            border-top: 1px solid #e6e6e7;
+			flex-direction: row;
+			justify-content: flex-end;
+			height: 3.25rem;
+			line-height: 3.25rem;
+			padding: 0 0.5rem;
+			background-color: #f6f6f6;
+			border-top: 1px solid #e6e6e7;
+			align-items: center;
         }
         .dialog > footer > button {
             margin: 0 0.25rem;
             line-height: 1.5rem;
             border: none;
             border-radius: 0.1875rem;
-            background-color: transparent;
-            color: rgb(202, 228, 251);
-            text-shadow: 0 0 0.125rem #000000;
-            font-family: Arial,Helvetica,sans-serif;
+            background-color: transparent;                     
+			font-family: "72",Arial,Helvetica,sans-serif;			
             font-size: 0.875rem;
             text-align: center;
             cursor: pointer;
         }
+		
+		.dialog .emblazedButton{
+			background-color: #416b8e;
+			border-color: #416b8e;
+			color: #ffffff;
+			text-shadow: 0 0 0.125rem #000000;
+		}
+		
         .dialog > footer > button:hover {
             background-color: rgba(99, 127, 153, 0.5);
         }
-
         .pdfobject{
             display: flex;
-            width: 100%;
-            height: 100%;
-            padding: 32px;
+			width: 100%;
+			height: calc(100% -1rem);
+			margin: 1rem;
         }
     </style>
     <script>
@@ -140,14 +151,14 @@ function consentPage(user, pdf) {
         <div class="dialog">
             <header>Consent Request</header>
             <main>
-                <object class="pdfobject" type="application/pdf" data="${pdf}?#zoom=75&scrollbar=0&toolbar=0&navpanes=0" id="pdf_content">
+                <object class="pdfobject" type="application/pdf" data="${pdf}?#scrollbar=0&toolbar=0&navpanes=0" id="pdf_content">
                     <p>Your browser is not able to present PDF file. Please download a PDF file from <a></a></p>
                 </object>
             </main>
             <footer>
-                <button onclick="acceptConsent()">I agree</button>
-                <button onclick="declineConsent()">Decline</button>                
-            </footer>    
+                <button class="emblazedButton" onclick="acceptConsent()">I agree</button>
+                <button onclick="declineConsent()">Try later</button>                
+            </footer>        
         </div>
     </div>
 </body>
