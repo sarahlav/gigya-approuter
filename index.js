@@ -157,7 +157,7 @@ function consentPage(user, pdf) {
             </main>
             <footer>
                 <button class="emblazedButton" onclick="acceptConsent()">I agree</button>
-                <button onclick="declineConsent()">Try later</button>                
+                <button onclick="declineConsent()">Decline</button>                
             </footer>        
         </div>
     </div>
