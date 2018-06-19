@@ -47,8 +47,8 @@ function consentPage(user, pdf) {
             border-radius: 0.25rem;
             box-shadow: 0 0.625rem 1.875rem 0 rgba(0,0,0,0.15), 0 0 0 1px rgba(0,0,0,0.15);
             overflow: hidden;
-            width: 80%;
-            height: 70%;
+            max-width: 80%;
+            max-height: 70%;
             font-family: Arial,Helvetica,sans-serif;
         }
         .dialog > header {
@@ -91,6 +91,12 @@ function consentPage(user, pdf) {
         .dialog > footer > button:hover {
             background-color: rgba(99, 127, 153, 0.5);
         }
+
+        .pdfobject{
+            display: flex;
+            width: 80%
+            height: 70%
+        }
     </style>
     <script>
         function declineConsent() {
@@ -130,7 +136,7 @@ function consentPage(user, pdf) {
         <div class="dialog">
             <header>Consent Request</header>
             <main>
-                <object width="600" height="300" type="application/pdf" data="${pdf}?#zoom=75&scrollbar=0&toolbar=0&navpanes=0" id="pdf_content">
+                <object class="pdfobject" type="application/pdf" data="${pdf}?#zoom=75&scrollbar=0&toolbar=0&navpanes=0" id="pdf_content">
                     <p>Your browser is not able to present PDF file. Please download a PDF file from <a></a></p>
                 </object>
             </main>
