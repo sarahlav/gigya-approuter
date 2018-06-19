@@ -49,18 +49,20 @@ function consentPage(user, pdf) {
             overflow: hidden;
             max-width: 80%;
             max-height: 70%;
+            width: 80%;
+            height: 70%;
             font-family: Arial,Helvetica,sans-serif;
         }
         .dialog > header {
             display: flex;
             flex-direction: row;
-            align-items: center;
-            justify-content: center;
-            height: 2.5rem;
-            padding: 0 1rem;
+            align-items: center;           
+            height: 3.25rem;
+            line-height: 3.25rem;
+            padding: 0 2rem;
             border-bottom: 1px solid #eee;
             background-color: #fff;
-            color: #666;
+            color: #0c73b5;;
             text-shadow: 0 0 0.125rem #fff;
         }
         .dialog > main {
@@ -73,7 +75,8 @@ function consentPage(user, pdf) {
             justify-content: flex-end;
             height: 2.5rem;
             padding: 0 0.5rem;
-            background-color: #2f3c48;
+            background-color: #f6f6f6;
+            border-top: 1px solid #e6e6e7;
         }
         .dialog > footer > button {
             margin: 0 0.25rem;
@@ -94,8 +97,9 @@ function consentPage(user, pdf) {
 
         .pdfobject{
             display: flex;
-            width: 80%
-            height: 70%
+            width: 100%;
+            height: 100%;
+            padding: 32px;
         }
     </style>
     <script>
@@ -141,8 +145,8 @@ function consentPage(user, pdf) {
                 </object>
             </main>
             <footer>
-                <button onclick="declineConsent()">Decline</button>
-                <button onclick="acceptConsent()">Accept</button>
+                <button type="Emblazed" onclick="acceptConsent()">I agree</button>
+                <button onclick="declineConsent()">Decline</button>                
             </footer>    
         </div>
     </div>
