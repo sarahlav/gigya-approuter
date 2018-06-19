@@ -47,8 +47,8 @@ function consentPage(user, pdf) {
             border-radius: 0.25rem;
             box-shadow: 0 0.625rem 1.875rem 0 rgba(0,0,0,0.15), 0 0 0 1px rgba(0,0,0,0.15);
             overflow: hidden;
-            max-width: 600px;
-            max-height: 400px;
+            max-width: 80%;
+            max-height: 70%;
             font-family: Arial,Helvetica,sans-serif;
         }
         .dialog > header {
